@@ -3,5 +3,11 @@ body {
 }
 
 .tab-content {
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    background: lightgreen;
+}
+
+a:hover {
+    background-color: aquamarine;
 }
