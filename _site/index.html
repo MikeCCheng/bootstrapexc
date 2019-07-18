@@ -2,90 +2,73 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <title>Signup Form</title>
   </head>
-  <header>
-    <div class="tab">
-      <button class="tablinks" onclick="openPage(event,'signup')" id="defaultOpen">Sign Up</button>
-      <button class="tablinks" onclick="openPage(event,'reset')">Reset</button>
-      <button class="tablinks" onclick="openPage(event,'login')">Log In</button>
-    </div>
-  </header>
   <body>
-    <div id="signup" class="tabcontent">
-      <form class="form-control" action="signup.html" method="post">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Full Name">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="true">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="reset-tab" data-toggle="tab" href="#reset" role="tab" aria-controls="reset" aria-selected="false">Reset</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+              <form class="form-control" action="signup.html" method="post">
+                  <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name">
+                  </div>
+                  <div>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                  </div>
+                  <div>
+                    <label for="mail">E-mail:</label>
+                    <input type="email" id="mail" name="mail" placeholder="Create@email.com">
+                  </div>
+                  <div>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="Password">
+                  </div>
+                  <div>
+                    <label for="cpwd">Confirm Password:</label>
+                    <input type="password" id="cpwd" name="cpwd" placeholder="Confirm Password">
+                  </div>
+                </form>
+          </div>
+          <div class="tab-pane fade" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form class="form-control" action="login.html" method="post">
+              <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+              </div>
+              <div>
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="reset" role="tabpanel" aria-labelledby="reset-tab">
+              <form class="form-control" action="reset.html" method="post">
+                  <div>
+                    <label for="username">Username or Email:</label>
+                    <input type="text" id="username" name="username" placeholder="Username or Email">
+                  </div>
+                  <div>
+                    <label for="pwd">Password:</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="Password">
+                  </div>
+                </form>
+          </div>
         </div>
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" placeholder="Username">
-        </div>
-        <div>
-          <label for="mail">E-mail:</label>
-          <input type="email" id="mail" name="mail" placeholder="Create@email.com">
-        </div>
-        <div>
-          <label for="pwd">Password:</label>
-          <input type="password" id="pwd" name="pwd" placeholder="Password">
-        </div>
-        <div>
-          <label for="cpwd">Confirm Password:</label>
-          <input type="password" id="cpwd" name="cpwd" placeholder="Confirm Password">
-        </div>
-      </form>
-    </div>
-    <div id="login" class="tabcontent">
-      <form class="form-control" action="signup.html" method="post">
-        <div>
-          <label for="username">Username/Email:</label>
-          <input type="text" id="username" name="username" placeholder="Username/Email">
-        </div>
-        <div>
-          <label for="pwd">Password:</label>
-          <input type="password" id="pwd" name="pwd" placeholder="Password">
-        </div>
-      </form>
-    </div>
-    <div id="reset" class="tabcontent">
-      <form class="form-control" action="signup.html" method="post">
-        <div>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" placeholder="Username">
-        </div>
-        <div>
-          <label for="pwd">Password:</label>
-          <input type="password" id="pwd" name="pwd" placeholder="Password">
-        </div>
-      </form>
-    </div>
-  </body>
+    </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script>
-    document.getElementById("defaultOpen").click();
-
-    function openPage(evt, pageName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
-
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(pageName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-  </script>
 </html>

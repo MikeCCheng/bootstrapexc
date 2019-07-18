@@ -1,6 +1,5 @@
 body {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .tab {
@@ -10,7 +9,7 @@ body {
 }
 
 .tab button {
-    background-color: inherit;
+    background-color: lightgreen;
     float: left;
     border: none;
     outline: none;
@@ -20,7 +19,7 @@ body {
   }
   
   .tab button:hover {
-    background-color:lightgreen;
+    background-color:green;
 
   }
   
