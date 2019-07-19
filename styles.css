@@ -4,10 +4,18 @@ body {
     background: #2A5D83;
 }
 
+header {
+    font-size: 2em;
+    justify-content: center;
+    text-align: center;
+    background: aquamarine;
+}
+
 .tab-content {
     display:flex;
     justify-content: center;
 }
 
 a:hover {
-    background-color: aquamarine !important;
+    background-color: aquamarine;
+}
