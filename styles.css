@@ -9,10 +9,5 @@ body {
     justify-content: center;
 }
 
-.tab-pane {
-    box-sizing: content-box;
-}
-
 a:hover {
-    background-color: aquamarine;
-}
+    background-color: aquamarine !important;
