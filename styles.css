@@ -1,11 +1,12 @@
 body {
-    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    background: #2A5D83;
 }
 
 .tab-content {
-    display: flex;
+    display:flex;
     justify-content: center;
-    background: lightgreen;
 }
 
 a:hover {
